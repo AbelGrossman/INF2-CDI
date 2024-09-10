@@ -8,15 +8,11 @@ import dev.miage.inf2.course.cdi.service.InventoryService;
 import dev.miage.inf2.course.cdi.service.ReceiptTransmissionService;
 import dev.miage.inf2.course.cdi.service.impl.InMemoryInventoryService;
 import dev.miage.inf2.course.cdi.service.impl.StringReceiptTransmissionService;
-import jakarta.enterprise.context.ApplicationScoped;
 
-import jakarta.enterprise.context.Dependent;
-import jakarta.enterprise.inject.Default;
-import jakarta.inject.Inject;
 
 import java.util.Random;
 
-@Dependent
+
 public class BookShop implements Shop<Book> {
 
 

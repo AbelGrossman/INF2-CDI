@@ -26,24 +26,18 @@ class BookShopTest {
 
     static Customer customer;
 
-    @BeforeEach
-    public void setup() {
-        customer = new Customer(MobyNamesGenerator.getRandomName(), MobyNamesGenerator.getRandomName(), "toto@miage.dev", "+333895457896");
-    }
 
-    @Inject
+
+
     BookShop bookShop;
 
 
     @BeforeEach
     void setUp() {
-        try {
-            while (this.bookShop.sell(customer) != null) {
-                // keep selling what we have
-            }
-        } catch (OutOfStockException oos) {
-            // ok, the bookshop is empty now
-        }
+
+            customer = new Customer(MobyNamesGenerator.getRandomName(), MobyNamesGenerator.getRandomName(), "toto@miage.dev", "+333895457896");
+            bookShop = new BookShop();
+
 
     }
 
