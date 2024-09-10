@@ -27,7 +27,7 @@ class BookShopTest {
     static Customer customer;
 
     @BeforeEach
-    private void setup() {
+    public void setup() {
         customer = new Customer(MobyNamesGenerator.getRandomName(), MobyNamesGenerator.getRandomName(), "toto@miage.dev", "+333895457896");
     }
 
@@ -67,7 +67,7 @@ class BookShopTest {
     @Test
     void outOfStock() throws InterruptedException {
 
-        ExecutorService service = Executors.newFixedThreadPool(12);
+
         getStokingRunnable(bookShop, 10, 10).parallel().forEach(Runnable::run);
 
         try {
