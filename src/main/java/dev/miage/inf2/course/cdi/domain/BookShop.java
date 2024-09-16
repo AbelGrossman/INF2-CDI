@@ -19,10 +19,10 @@ import java.util.Random;
 public class BookShop implements Shop<Book> {
 
     @Inject
-    @Named("InventoryGoodForBookStore")
+    @ForBookStore
     protected InventoryService<Book> inventoryService;
     @Inject
-    @Named("ReceiptGoodForBookStore")
+    @ForBookStore
     protected ReceiptTransmissionService<Book> receiptTransmissionService;
 
     public BookShop() {
